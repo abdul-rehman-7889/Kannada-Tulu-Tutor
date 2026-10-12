@@ -4,7 +4,12 @@ primaryColor = "#17150F"
 backgroundColor = "#FBFAF6"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#3A362C"
-font = "sans serif"
+font = "Source Sans, Tulu Mallige, sans-serif"
+
+[[theme.fontFaces]]
+family = "Tulu Mallige"
+url = "app/static/fonts/Mallige-v1.4.ttf"
+unicodeRange = "U+11380-113FF"
 
 [browser]
 gatherUsageStats = false
