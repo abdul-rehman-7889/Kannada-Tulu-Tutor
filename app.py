@@ -1404,7 +1404,8 @@ def _student_detail(students):
         else:
             st.caption("Nothing recorded yet for this child.")
 
-    csv = df.to_csv(index=False).encode("utf-8-sig")
+    export = df.assign(word=[graph_engine.display_word(p) for p in progress])
+    csv = export.to_csv(index=False).encode("utf-8-sig")
     safe_name = "".join(c if (c.isalnum() or c in "-_") else "_"
                         for c in display_name) or "student"
     ui.spacer()
